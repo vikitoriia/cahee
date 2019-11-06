@@ -1,57 +1,62 @@
-.ba-post{
-	color: #ffffff;
-	text-decoration: none;
-	position: relative;
-	display: block;
+.ba-posts {
 	margin-bottom: 20px;
-	&:hover{
+}
+
+.ba-post {
+	margin-bottom: 30px;
+}
+
+.ba-post a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	position: relative;
+
+	&:hover {
 		color: #fff;
 		opacity: 0.6;
 	}
 }
-.ba-post img{
-	display: block;
-	width: 100%;
-	margin-bottom: 50px;
 
+.ba-post img {
+	display: block;
+	min-width: 100%;
 }
-.ba-post-date{
-background: rgba(0, 0, 0, 0.5);
-width: 60px;
-height: 60px;
-padding: 2px 5px 5px;
-display: flex;
-flex-direction: column;
-align-items: center;
-line-height: 1;
-border-radius: 8px;
-position: absolute;
-left: 30px;
-top: 30px;
-font-size: 32px;
-font-weight: 700;
-z-index: 2;
+
+.ba-post-date {
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	width: 60px;
+	height: 60px;
+	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	line-height: 1;
+	font-size: 32px;
+	font-weight: 700;
+	padding: 2px 5px 5px;
+
+	position: absolute;
+	top: 30px;
+	left: 30px;
 }
-.ba-post-date span{
+
+.ba-post-date span {
 	font-size: 21px;
 	text-transform: uppercase;
 	font-weight: 900;
 }
-.ba-post-body{
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-padding: 50px 20px 20px;
-background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-z-index: 1;
+
+.ba-post-body {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 50px 20px 20px;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
-.ba-post-title{
+
+.ba-post-title {
 	margin-bottom: 12px;
-}
-.ba-post-meta .ba-post-title{
-right: 20px;
-}
-.ba-post-meta{
-	font-size: 13px;
 }
