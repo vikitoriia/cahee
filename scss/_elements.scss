@@ -1,0 +1,92 @@
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+
+	min-height: 55px;
+	line-height: 55px;
+	background: $primary-color;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+	border:  none;
+	padding: 0 24px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+
+	&:hover{
+		background-color: darken($primary-color, 15%);
+		color: #fff;
+	}
+}
+
+.ba-button {
+	&--gallery {
+		background: #5585a2;
+		min-width: 200px;
+		&:hover {
+			background: darken(#5585a2, 15%);
+		}
+	}
+	&--blog {
+		background: #F72B3B;
+		min-width: 200px;
+		&:hover {
+			background: darken(#F72B3B, 15%);
+		}
+	}
+
+	&--subscribe {
+		background: #96B92C;
+		min-width: 170px;
+		&:hover {
+			background: darken(#96B92C, 15%);
+		}
+	}
+
+	&--contact {
+		background: #3477AC;
+		min-width: 170px;
+		&:hover {
+			background: darken(#3477AC, 15%);
+		}
+	}
+
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	height: 55px;
+	padding: 10px 15px;
+	border: 1px solid $text-color;
+	background: #fff;
+	border-radius: 0px;
+	font-size: 15px;
+	color: $text-color;
+	&::placeholder {
+		color: rgba($text-color, 0.5)
+	}
+	&:focus{
+		outline: none;
+		border-color: #6BBCFF;
+	}
+}
+
+textarea {
+	height: auto;
+	resize: none;
+}

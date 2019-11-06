@@ -1,0 +1,66 @@
+.ba-post {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  margin-bottom: 20px; }
+  .ba-post:hover {
+    color: #fff;
+    opacity: 0.6; }
+
+.ba-post img {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px; }
+
+.ba-post-date {
+  background: rgba(0, 0, 0, 0.5);
+  width: 60px;
+  height: 60px;
+  padding: 2px 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  border-radius: 8px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  z-index: 2; }
+
+.ba-post-date span {
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 900; }
+
+.ba-post-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 20px 20px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(transparent));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), transparent);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8), transparent);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1; }
+
+.ba-post-title {
+  margin-bottom: 12px; }
+
+.ba-post-meta .ba-post-title {
+  right: 20px; }
+
+.ba-post-meta {
+  font-size: 13px; }
+
+/*# sourceMappingURL=blog.css.map */

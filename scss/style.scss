@@ -1,0 +1,386 @@
+$medium: 640px;
+$large: 1024px;
+$primary-color: #ff6033;
+$text-color: #262626;
+$body-font-family: Raleway, sans-serif;
+
+
+@import "normalize";
+@import "layout";
+@import "elements";
+@import "blog";
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700,900&display=swap');
+html{
+	scroll-behavior: smooth;
+}
+body{
+font: 300 17px/1.5 Raleway, sans-serif;
+color: $text-color;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1210px;
+}
+a{
+	color: $primary-color;
+	text-decoration: none;
+	&:hover{
+		color: rgba($primary-color, 0.7);
+	}
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0 0 30px;
+	line-height: 1.2;
+}
+h1{
+	margin-bottom: 15px;
+	font-size: 54px;
+}
+@media (min-width: 640px){
+	h1{
+		font-size: 60px;
+	}
+}
+h2{
+	font-size: 48px;
+}
+h3{
+	font-size: 20px;
+}
+h4{
+	font-size: 18px;
+}
+h5, h6{
+	font-size: 18px;
+}
+p{
+margin: 0 0 25px;
+}
+
+.ba-container{
+	max-width: 1200px;
+	padding: 15px;
+	padding-right: 15px;
+}
+.ba-section-intro{
+	background: #ffffff url(../img/fon-first.jpg) no-repeat 50%;
+	background-size: cover;
+	
+}
+.ba-intro-inner{
+	
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	max-width: 370px;
+	padding: 140px 0 200px;
+}
+.ba-header{
+	/*background: #cccccc;*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	/*background: #444 url(../img/intro-bg.jpg) 50% 0;*/
+	z-index: 2;
+	padding-bottom: 20px;
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
+	
+}
+.ba-menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+	margin-top: -3px;
+	
+
+	
+}
+.ba-main-nav{
+z-index: 5;
+}
+.ba-menu-toggle{
+border: none;
+background: none;
+color: #ffffff;
+box-shadow: none;
+&:hover{
+	background: none;
+	
+}
+}
+.ba-menu-toggle svg{
+	fill: currentColor;
+}
+.ba-menu-toggle:focus, .ba-menu-toggle:hover{
+	outline: none;
+	color: $text-color;
+}
+@media (min-width: 768px){
+.ba-menu-toggle{
+display: none;
+	}
+}
+
+.ba-header-bar{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 50px;
+	align-items: center;
+}
+.ba-menu li + li{
+	margin-left: 36px;
+}
+.ba-menu a{
+	color: $text-color;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	position: relative;
+	
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: currentColor;
+		position: absolute;
+		left: 0;
+		top: -7px;
+
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		transition: opacity 0.3s, transform0.3s;
+	}
+}
+.ba-menu a:hover{
+	color: $primary-color;
+	&:before{
+		opacity: 1;
+		transform: scaleX(1);
+	}
+}
+
+@media (max-width: 767px){
+	.ba-main-nav{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		width: 50vw;
+		min-width: 250px;
+		height: 100vh;
+		background: rgba(#fff,0.95);
+		box-shadow: 0 0 10px #000;
+		padding: 150px 30px 30px 0;
+
+		transition: transform 0.9s;
+		transform: translateX(calc(-100% - 10px) );
+	}
+	.ba-main-nav.active{
+transform: translateX(0);
+z-index: 5;
+	}
+	.ba-menu{
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 40px 20px;
+
+	}
+	.ba-menu li + li{
+		margin-left: 0;
+	}
+	.ba-menu a{
+		font-size: 20px;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+}
+
+.ba-logo img{
+	display: block;
+}
+.ba-section{
+	padding: 100px 0;
+}
+.ba-section--colored{
+	background-image: linear-gradient(to bottom, #333399, #fe00cc);
+	color: #ffffff;
+}
+.ba-page-title{
+	font-size: 60px;
+	font-weight: 900;
+	margin-bottom: 15px;
+}
+@media screen and (max-width:767px){
+	.ba-page-title{
+		font-size: 36px;
+	}
+}
+.ba-scroll{
+	position: absolute;
+	bottom: 70px;
+	width: 24px;
+	height: 40px;
+	background: url(../img/scroll.png);
+	left: 50%;
+	margin-left: -12px;
+	&:hover{
+		opacity: 0.5;
+	}
+}
+.ba-about-col{
+	@media screen and (min-width: $large){
+		order: 1;
+	}
+}
+.ba-about-content{
+	@media screen and (min-width: $large){
+		padding: 90px 0 0 70px;
+	}
+}
+.ba-about-img{
+	@media screen and (min-width: $large){
+		margin: -40px 0 0 -55px;
+		max-width: initial;
+	}
+}
+.ba-section{
+	padding: 40px 0;
+	@media screen and (min-width: $medium){
+		padding: 85px 0;
+	}
+&--blog{
+	background: #b07cf7;
+	color: #ffffff;
+	@media screen and (min-width: $large){
+		padding: 65px 0 105px;
+	}
+}
+&--services{
+	background: #70bfff;
+	color: #fff;
+	@media screen and (min-width: $large){
+		padding: 165px 0 140px;
+	}
+}
+&--about{
+	background: #00b2b2;
+	color: #ffffff;
+	@media screen and (min-width: $large){
+		padding: 55px 0 2px;
+	}
+}
+&--gallery{
+		background: #ffe92f;
+		@media screen and (min-width: $large){
+			padding: 67px 0 107px;
+		}
+}
+&--subscribe{
+	background: url(../img/subscribe.png) 0% 50%;
+	background-size: cover;
+	@media screen and (min-width: $large){
+		padding: 123px 0 150px;
+		background: url(../img/subscribe.png) 50% no-repeat;
+	}
+}
+&--contact{
+	background: url(../img/contact.jpg) 50%;
+	background-size: auto 170%;
+	@media screen and (min-width: $large){
+		padding: 65px 0 40px;
+		background-size: cover;
+		
+	}
+}
+}
+.ba-section-title{
+text-align: center;
+font-weight: 700;
+font-size: 60px;
+margin: 0 0 5px;
+@media screen and (min-width: $medium){
+font-size: 90px;
+margin-bottom: 20px;
+}
+&--left{
+text-align: left;
+margin: 0 0 5px;
+}
+}
+.ba-section-content{
+text-align: center;
+max-width: 580px;
+margin: 0 auto 45px;
+}
+@import "services";
+
+.ba-gallery{
+	margin-bottom: 20px;
+	img{
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+		display: block;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+@import "subscribe.scss";
+
+@import "contact.scss";
+
+.ba-align-middle{
+	align-items: center;
+}
+
+.ba-footer{
+	padding: 15px 0;
+	background: #212121;
+	color: #b9b9b9;
+	text-align: center;
+	line-height: 1;
+	font-size: 16px;
+	@media screen and (max-width: $large - 1px){
+	p{
+	margin: 0;
+		}	
+	}
+}
+.ba-copyright{
+	@media screen and (min-width: $large){
+		text-align: left;
+	}
+}
+.ba-madeby{
+	font-size: 15px;
+	em{
+		font-style: normal;
+		color: #ff2b58;
+		font-weight: 70;
+	}
+	@media screen and (min-width: $large){
+		text-align: right;
+	}
+}
+@media screen and (max-width: $large - 1px){
+	.ba-copyright{
+margin-bottom: 20px;
+	}	
+	.ba-madeby{
+		margin: 20px 0 0;
+	}
+}
